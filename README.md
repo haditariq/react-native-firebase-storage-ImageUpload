@@ -14,5 +14,6 @@ Upload image to firebase storage using react native. Stick and have a look that 
   # 3. Getting started with Image uplaod to firebase storage.<br>
     we need to do some installations
     ## 1 Go to https://www.npmjs.com/package/react-native-fetch-blob
-    Install the module.
+    1. Install the module.
+    2. Do set RNFB_ANDROID_PERMISSIONS = true  (also mentioned in source).
   
