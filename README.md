@@ -37,6 +37,7 @@ Upload image to firebase storage using react native. Stick and have a look that 
         let uploadBlob = null;
         const sessionId = new Date().getTime();
         //child(this.state.imgName) conatins response.fillName returned from image picked in response.
+        // ref(/images/) make a folder on firebase storage
         const imageRef = firebase.storage().ref('/images/').child(this.state.imgName);
         fs.readFile(uploadUri, 'base64')
             .then((data) => {
