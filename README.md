@@ -1,7 +1,7 @@
 # react-native-firebase-storage-ImageUpload
 Upload image to firebase storage using react native. Stick and have a look that all what you need. 
 <br>
-<h1>Getting started</h1>
+#Getting started</h1>
 <ol>
   <li>
     <ol>
@@ -9,7 +9,7 @@ Upload image to firebase storage using react native. Stick and have a look that 
       <li>
         Set you config variable and initializeApp
         <ol>
-          <li> </li>
+          <li>![Config firebase](assets/config.png "Title") </li>
         </ol>
       </li>
     </ol>
