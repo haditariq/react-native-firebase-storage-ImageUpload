@@ -8,6 +8,7 @@ Upload image to firebase storage using react native. Stick and have a look that 
 
 # 2. Get Image-picker for react native working. </br> 
     https://github.com/react-community/react-native-image-picker
+    After Installing the module you can do Auto installtion react-native link react-native-image-picker@latest
     install manually explained in the source. <br>
     After installing the module you can auto install the component. If this does not works you need to install it
     manually mentioned in the source. Auto installation worked fine for me.
@@ -16,9 +17,10 @@ Upload image to firebase storage using react native. Stick and have a look that 
     we need to do some installations
     Go to https://www.npmjs.com/package/react-native-fetch-blob
     1. Install the module.
-    2. Do set RNFB_ANDROID_PERMISSIONS = true  (also mentioned in source).
-    3. Do: import RNFetchBlob from 'react-native-fetch-blob';
-    4. Add some code in middle of class and import area
+    2. Auto installtion: react-native link react-native-fetch-blob
+    3. Do set RNFB_ANDROID_PERMISSIONS = true  (also mentioned in source).
+    4. Do: import RNFetchBlob from 'react-native-fetch-blob';
+    5. Add some code in middle of class and import area
         const Blob = RNFetchBlob.polyfill.Blob;
         fs = RNFetchBlob.fs;
         window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
@@ -47,8 +49,6 @@ Upload image to firebase storage using react native. Stick and have a look that 
             .then((url) => {
                 uploadBlob.close();
                 return imageRef.getDownloadURL();
-                s
-
             })
             .then((url) => {
 
