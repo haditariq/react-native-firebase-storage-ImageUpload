@@ -185,12 +185,6 @@ Upload image to firebase storage using react native. Stick and have a look that 
     }
 }
 
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-        }
-    });
-
 
 
   
