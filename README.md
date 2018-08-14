@@ -183,7 +183,7 @@ Upload image to firebase storage using react native. Stick and have a look that 
             </View>
         );
     }
-}
+    }
 
 
 
