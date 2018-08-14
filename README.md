@@ -28,7 +28,7 @@ Upload image to firebase storage using react native. Stick and have a look that 
     1. uri = response.uri // response is returned from image picker
     
                     imgName: response.fileName,
-uploadImage = (uri, mime = 'application/octet-stream') => {
+    uploadImage = (uri, mime = 'application/octet-stream') => {
         // return new Promise((resolve, reject) => {
         const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri;
         let uploadBlob = null;
