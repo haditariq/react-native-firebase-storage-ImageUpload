@@ -22,4 +22,44 @@ Upload image to firebase storage using react native. Stick and have a look that 
         fs = RNFetchBlob.fs;
         window.XMLHttpRequest = RNFetchBlob.polyfill.XMLHttpRequest;
         window.Blob = Blob;
+        
+# code for image upload 
+  # Parameters  
+    1. uri = response.uri // response is returned from image picker
+    
+                    imgName: response.fileName,
+uploadImage = (uri, mime = 'application/octet-stream') => {
+        // return new Promise((resolve, reject) => {
+        const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri;
+        let uploadBlob = null;
+        const sessionId = new Date().getTime();
+        //child(this.state.imgName) conatins response.fillName returned from image picked in response.
+        const imageRef = firebase.storage().ref('/images/').child(this.state.imgName);
+        fs.readFile(uploadUri, 'base64')
+            .then((data) => {
+                return Blob.build(data, {type: `${mime};Base64`})
+            })
+            .then((blob) => {
+                uploadBlob = blob;
+                return imageRef.put(blob, {contentType: mime})
+            })
+            .then((url) => {
+                uploadBlob.close();
+                return imageRef.getDownloadURL();
+                s
+
+            })
+            .then((url) => {
+
+                this.storeReference(url, sessionId);
+                // console.warn(url);
+            })
+            .catch((err) => {
+                console.error(err);
+            })
+    }
+    storeReference = (url) => {
+        this.setState({firebaseImageUrl: url});
+    }
+
   
