@@ -10,4 +10,4 @@ Upload image to firebase storage using react native. Stick and have a look that 
   https://github.com/react-community/react-native-image-picker
 # install manually explained in the source. <br>
   for auto installation you can run <br>
-  ### npm react-native link react-native-image-picker@latest
+  ### react-native link react-native-image-picker@latest
